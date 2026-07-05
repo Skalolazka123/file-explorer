@@ -1,0 +1,43 @@
+/* FileNode.css */
+.file-node {
+    margin: 5px 20px;
+    user-select: none;
+  }
+  
+  .node-item {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+  }
+  
+  .node-item:hover {
+    border-color: #4493F8;
+  }
+  .node-item.folder-open {
+    background-color: #4492f834;
+  }
+  
+  .node-item.folder {
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .node-item.file {
+    cursor: default;
+  }
+  
+  .children-container {
+    border-left: 3px solid #4493F8;
+    margin-left: 10px;
+    padding-left: 5px;
+  }
+
+  .empty-message {
+    font-style: italic;
+    color: #888;
+    margin: 5px 20px;
+    padding: 4px 8px;
+  }
