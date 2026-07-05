@@ -1,18 +1,18 @@
 import { useState } from "react";
 import "./FileNode.css";
 
-const isDirectory = (node) => node.type === "folder";
+const isDirectory = (node) => node && node.type === "folder";
 
 const FileNode = ({ name, data, path = "" }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const currentPath = `${path}/${name}`;
-
-  const isFolder = isDirectory(data);
-  // Check if there are children and the children object is not empty
-  const hasChildren = data.children && Object.keys(data.children).length > 0;
 
   // No data, don't render anything
   if (!data) return null;
+
+  const currentPath = `${path}/${name}`;
+  const isFolder = isDirectory(data);
+  // Check if there are children and the children object is not empty
+  const hasChildren = data.children && Object.keys(data.children).length > 0;
 
   return (
     <div className="file-node">
